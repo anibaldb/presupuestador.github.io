@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuestador</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <div class="tipoRepa">
+
+        <select id="tipoRepas">
+            <option value="a" selected>Modulos</option>
+            <option value="b">Carga, baterias, camaras</option>
+            
+        </select>
+        
+    </div>
+
+
+
+    <div class="principal">
+        <label for="">Ingrese precio del Repuesto</label>
+        <input type="number" id="precioRepuesto" autofocus>
+        <label for="">Ingrese precio del dolar</label>
+        <input type="number" id="precioDolar">
+
+        <button type="button" onclick="nnn()">Calcular</button>
+    </div>
+
+
+
+    <div class="divisiones">
+       
+
+        <div class="unpago">
+
+            
+            
+            <div id="debito"></div>
+
+            <div id="online"></div>
+
+            <div class="cuotas">
+                <div id="valor1"></div>
+                <div id="valor2"></div>
+                <div id="valor3"></div>
+                <div id="valor4"></div> 
+                
+            </div>
+
+
+        </div>
+
+        <!-- <div class="cuotas">
+            <div id="valor1"></div>
+            <div id="valor2"></div>
+            <div id="valor3"></div>
+            <div id="valor4"></div> 
+            
+        </div> -->
+    </div>
+
+    <script src="./cuentas.js"></script>
+
+</body>
+
+</html>

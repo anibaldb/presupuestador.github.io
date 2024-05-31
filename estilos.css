@@ -1,0 +1,118 @@
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+ 
+
+}
+
+select{
+    letter-spacing: 0.2em;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left:  10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    height: 28px;
+}
+
+input{
+    letter-spacing: 0.2em;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left:  10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    height: 28px;
+}
+
+button{
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    width: 150px;
+    height: 35px;
+}
+
+
+.divisiones{
+    
+    display: flex;
+    
+    
+    
+}
+
+.tipoRepa{
+    justify-content: center;
+    border-radius: 20px;
+    padding: 30px;
+    
+    width: auto;
+
+}
+
+.principal{
+    justify-content: center;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: rgb(144, 169, 244);
+    width: auto;
+
+}
+
+
+.unpago {
+    letter-spacing: 0.25em;
+    display: flex;
+    align-items:center; 
+    justify-content:center;
+    text-decoration: solid;
+
+    padding: 30px;
+    
+    width: 100%;
+
+}
+
+.cuotas {
+
+    letter-spacing: 0.25em;
+    padding: 30px;
+    line-height: 80px;
+    
+    width: 45%;
+
+    
+}
+
+#online{
+
+ text-decoration: solid;
+
+ font-size: larger;
+
+ font-weight: 900;
+
+ font-size: 50px ;
+
+}
+
+#debito{
+
+    text-decoration: solid;
+   
+    font-size: larger;
+   
+    font-weight: 900;
+   
+    font-size: 20px ;
+   
+   }
