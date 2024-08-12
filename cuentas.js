@@ -42,11 +42,11 @@ function nnn(){
 
     }else if(repuestoPesos>=24000 && repuestoPesos<=34000){
 
-        presuCliente = repuestoPesos *2
+        presuCliente = (repuestoPesos *2)*1.065
 
     }else{
 
-        presuCliente = repuestoPesos *1.8
+        presuCliente = (repuestoPesos *1.8)*1.065
 
     }
 
