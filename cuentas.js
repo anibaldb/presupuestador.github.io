@@ -60,6 +60,11 @@ function nnn(){
     var nueveCuotas= presuCliente*1.5143
     var doceCuotas= presuCliente*1.6578
 
+    var tresCuotasNoBanc= presuCliente*1.2919
+    var seisCuotasNoBanc= presuCliente*1.4819
+
+
+
     
     
     
@@ -74,6 +79,12 @@ function nnn(){
     document.getElementById('valor3').innerHTML = "9 cuotas de $"+(nueveCuotas/9).toFixed()+" Total $"+nueveCuotas.toFixed()
 
     document.getElementById('valor4').innerHTML = "12 cuotas de $"+(doceCuotas/12).toFixed()+" Total $"+doceCuotas.toFixed()
+
+    document.getElementById('nobanc').innerHTML = "Solo tarjetas Naranja VISA Y Fava CABAL"
+
+    document.getElementById('nobanc').innerHTML = "3 cuotas de $"+(tresCuotasNoBanc/3).toFixed()+" Total $"+tresCuotasNoBanc.toFixed()
+
+    document.getElementById('nobanc').innerHTML = "6 cuotas de $"+(seisCuotasNoBanc/6).toFixed()+" Total $"+seisCuotasNoBanc.toFixed()
 
 
 
