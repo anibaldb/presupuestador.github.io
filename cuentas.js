@@ -86,7 +86,7 @@ function nnn(){
 
     document.getElementById('nobanc3').innerHTML = "6 cuotas de $"+(seisCuotasNoBanc/6).toFixed()+" Total $"+seisCuotasNoBanc.toFixed()
 
-    document.getElementById('nobanc4').innerHTML = "Todas las cuotas salen poniendo el PRECIO MOSTRADOR en cualquiera de los dos posnet y el valor de la cuota es aproximado"+(seisCuotasNoBanc/6).toFixed()+" Total $"+seisCuotasNoBanc.toFixed()
+    document.getElementById('nobanc4').innerHTML = "Todas las cuotas salen poniendo el PRECIO MOSTRADOR en cualquiera de los dos posnet y el valor de la cuota es aproximado"
 
 
 
