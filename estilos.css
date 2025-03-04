@@ -121,6 +121,10 @@ button{
     letter-spacing: 0.25em;
     padding: 30px;
     line-height: 80px;
+    text-decoration: solid;
+    font-weight: 900;
+    font-size: larger;
+    
     align-items:center; 
     justify-content:center;
     
@@ -147,6 +151,19 @@ button{
     line-height: 80px;
     align-items:center; 
     justify-content:center;
+    
+
+    
+}
+
+#nobanc4 {
+
+    letter-spacing: 0.25em;
+    padding: 30px;
+    line-height: 80px;
+    align-items:center; 
+    justify-content:center;
+    font-size: 35px;
     
 
     
