@@ -23,7 +23,7 @@ function nnn(){
 
     if (value == "a"){
 
-         quieroGanar = 18500
+         quieroGanar = 20500
         
     }else if (value == "b"){
 
