@@ -65,11 +65,11 @@ function nnn(){
     
     document.getElementById('online').innerHTML = "PRECIO ONLINE  $"+precioOnline.toFixed()
 
-    document.getElementById('debito').innerHTML = "Debito y credito en 1 pago $"+debito.toFixed()
+    document.getElementById('debito').innerHTML = "(PRECIO MOSTRADOR) Debito y credito en 1 pago $"+debito.toFixed()
 
     document.getElementById('valor1').innerHTML = "(CUOTA SIMPLE) 3 cuotas de $"+(tresCuotas/3).toFixed()+" Total $"+tresCuotas.toFixed()
 
-    document.getElementById('valor2').innerHTML = "6 cuotas de $"+(seisCuotas/6).toFixed()+" Total $"+seisCuotas.toFixed()
+    document.getElementById('valor2').innerHTML = "(CUOTA SIMPLE) 6 cuotas de $"+(seisCuotas/6).toFixed()+" Total $"+seisCuotas.toFixed()
 
     document.getElementById('valor3').innerHTML = "9 cuotas de $"+(nueveCuotas/9).toFixed()+" Total $"+nueveCuotas.toFixed()
 
