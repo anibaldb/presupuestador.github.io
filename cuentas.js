@@ -60,8 +60,8 @@ function nnn(){
     var nueveCuotas= presuCliente*1.5143
     var doceCuotas= presuCliente*1.6578
 
-    var tresCuotasNoBanc= presuCliente*1.2919
-    var seisCuotasNoBanc= presuCliente*1.4819
+    var tresCuotasNoBanc= debito*1.2919
+    var seisCuotasNoBanc= debito*1.4819
 
 
 
