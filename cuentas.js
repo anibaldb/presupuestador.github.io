@@ -54,11 +54,11 @@ function nnn(){
 
 
     var precioOnline = presuCliente
-    var debito= presuCliente*1.20
-    var tresCuotas= presuCliente*1.2
-    var seisCuotas= presuCliente*1.4489
-    var nueveCuotas= presuCliente*1.6961
-    var doceCuotas= presuCliente*1.9341
+    var debito= presuCliente*1.1
+    var tresCuotas= presuCliente*1.162
+    var seisCuotas= presuCliente*1.2201
+    var nueveCuotas= presuCliente*1.5143
+    var doceCuotas= presuCliente*1.6578
 
     
     
@@ -67,7 +67,7 @@ function nnn(){
 
     document.getElementById('debito').innerHTML = "Debito y credito en 1 pago $"+debito.toFixed()
 
-    document.getElementById('valor1').innerHTML = "3 cuotas sin interes de $"+(tresCuotas/3).toFixed()+" Total $"+tresCuotas.toFixed()
+    document.getElementById('valor1').innerHTML = "(CUOTA SIMPLE) 3 cuotas de $"+(tresCuotas/3).toFixed()+" Total $"+tresCuotas.toFixed()
 
     document.getElementById('valor2').innerHTML = "6 cuotas de $"+(seisCuotas/6).toFixed()+" Total $"+seisCuotas.toFixed()
 
