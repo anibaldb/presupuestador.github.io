@@ -80,11 +80,11 @@ function nnn(){
 
     document.getElementById('valor4').innerHTML = "12 cuotas de $"+(doceCuotas/12).toFixed()+" Total $"+doceCuotas.toFixed()
 
-    document.getElementById('nobanc').innerHTML = "Solo tarjetas Naranja VISA Y Fava CABAL"
+    document.getElementById('nobanc1').innerHTML = "Solo tarjetas Naranja VISA Y Fava CABAL"
 
-    document.getElementById('nobanc').innerHTML = "3 cuotas de $"+(tresCuotasNoBanc/3).toFixed()+" Total $"+tresCuotasNoBanc.toFixed()
+    document.getElementById('nobanc2').innerHTML = "3 cuotas de $"+(tresCuotasNoBanc/3).toFixed()+" Total $"+tresCuotasNoBanc.toFixed()
 
-    document.getElementById('nobanc').innerHTML = "6 cuotas de $"+(seisCuotasNoBanc/6).toFixed()+" Total $"+seisCuotasNoBanc.toFixed()
+    document.getElementById('nobanc3').innerHTML = "6 cuotas de $"+(seisCuotasNoBanc/6).toFixed()+" Total $"+seisCuotasNoBanc.toFixed()
 
 
 
