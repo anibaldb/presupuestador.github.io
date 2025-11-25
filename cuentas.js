@@ -23,11 +23,11 @@ function nnn(){
 
     if (value == "a"){
 
-         quieroGanar = 20500
+         quieroGanar = 18000
         
     }else if (value == "b"){
 
-        quieroGanar = 14500
+        quieroGanar = 18000
 
     }
     
@@ -38,15 +38,15 @@ function nnn(){
 
     if (repuestoPesos<24500){
 
-        var presuCliente = (repuestoPesos + quieroGanar)*1.05
+        var presuCliente = (repuestoPesos*0.85 + quieroGanar)
 
     }else if(repuestoPesos>=24500 && repuestoPesos<=34500){
 
-        presuCliente = (repuestoPesos *1.8)*1.05
+        presuCliente = (repuestoPesos*0.85 *1.8)
 
     }else{
 
-        presuCliente = (repuestoPesos *1.7)*1.05
+        presuCliente = (repuestoPesos*0.85 *1.7)
 
     }
 
