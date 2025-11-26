@@ -36,13 +36,13 @@ function nnn(){
 
     
 
-    if (repuestoPesos<24500){
+    if (repuestoPesos<20500){
 
         var presuCliente = (repuestoPesos*0.85 + quieroGanar)
 
-    }else if(repuestoPesos>=24500 && repuestoPesos<=34500){
+    }else if(repuestoPesos>=20500 && repuestoPesos<=34500){
 
-        presuCliente = (repuestoPesos*0.85 *1.8)
+        presuCliente = (repuestoPesos*0.85 *2)
 
     }else{
 
