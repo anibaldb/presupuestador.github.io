@@ -11,7 +11,7 @@ function nnn(){
     
     var valorRepuesto=document.getElementById('precioRepuesto').value;
     var valorDolar=document.getElementById('precioDolar').value;
-    var repuestoPesos = valorRepuesto*valorDolar
+    var repuestoPesos = valorRepuesto*valorDolar*.8
 
     var select = document.getElementById('tipoRepas');
     var value = select.options[select.selectedIndex].value;
