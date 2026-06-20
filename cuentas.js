@@ -82,7 +82,7 @@ function nnn(){
     document.getElementById('whatsapp').textContent =
 `📱 PRESUPUESTO LISTO
 
-💰 Total reparación: $${precioOnline.toFixed()} - SOLO EFECTIVO O TRANSFERENCIA
+💰 Total reparación: $*${precioOnline.toFixed()}* - SOLO EFECTIVO O TRANSFERENCIA
 
 💳 Débito / Credito(1 Pago): $${debito.toFixed()}
 
