@@ -79,7 +79,7 @@ function nnn(){
     seisCuotasNoBanc = precioPsicologico(seisCuotasNoBanc);
 
     
-    document.getElementById('whatsapp').innerHTML =
+    document.getElementById('whatsapp').textContent =
 `
 📱 PRESUPUESTO LISTO
 
