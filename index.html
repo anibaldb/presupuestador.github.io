@@ -37,8 +37,12 @@
             </div>
 
             <div class="input-group">
-                <label for="precioDolar">Cotización del Dólar ($)</label>
-                <input type="number" id="precioDolar" placeholder="Ej: 1100">
+                <label for="precioDolar">Cotización del Dólar Blue ($)</label>
+                <div class="input-with-btn">
+                    <input type="number" id="precioDolar" placeholder="Se carga automáticamente...">
+                    <button type="button" class="btn-refresh" onclick="obtenerDolarBlue()" title="Actualizar cotización">🔄</button>
+                </div>
+                <div id="dolar-status" class="dolar-status loading">⏳ Cargando cotización...</div>
             </div>
 
             <button type="button" class="btn-calculate" onclick="nnn()">Calcular Presupuesto ⚡</button>

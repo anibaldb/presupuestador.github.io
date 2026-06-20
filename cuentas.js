@@ -91,6 +91,7 @@ function nnn(){
 • 6 cuotas aprox: *$${(seisCuotas/6).toFixed()}* (total *$${seisCuotas.toFixed()}*)
 
 📍  Revisión sin cargo
+
 🛠️ Reparación en el día si lo traes antes de las 13hs de lunes a viernes
 
 👉 Si querés la realizamos hoy mismo, avisame 👍`;

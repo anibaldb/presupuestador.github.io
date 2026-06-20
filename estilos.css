@@ -134,6 +134,67 @@ body {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
+/* Input con botón de refresco */
+.input-with-btn {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.input-with-btn input {
+    flex: 1;
+}
+
+.btn-refresh {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    border: 1.5px solid var(--border-color);
+    background-color: #fafafa;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.btn-refresh:hover {
+    background-color: #e0f2fe;
+    border-color: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+.btn-refresh:active {
+    transform: rotate(180deg);
+}
+
+/* Estado de la cotización */
+.dolar-status {
+    margin-top: 6px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.dolar-status.loading {
+    color: #92400e;
+    background-color: #fef3c7;
+}
+
+.dolar-status.ok {
+    color: #065f46;
+    background-color: #d1fae5;
+}
+
+.dolar-status.error {
+    color: #991b1b;
+    background-color: #fee2e2;
+}
+
 .btn-calculate {
     width: 100%;
     height: 48px;
