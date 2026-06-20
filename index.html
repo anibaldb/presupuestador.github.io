@@ -1,69 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presupuestador</title>
+    <title>Presupuestador Pro</title>
     <link rel="stylesheet" href="./estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="tipoRepa">
+    <header class="app-header">
+        <h1>📊 Presupuestador de Reparaciones</h1>
+        <p>Calcula presupuestos, cuotas y copia el formato listo para enviar por WhatsApp.</p>
+    </header>
 
-        <select id="tipoRepas">
-            <option value="a" selected>Modulos</option>
-            <option value="b">Carga, baterias, camaras</option>
+    <main class="dashboard-container">
+        <!-- Columna de Entrada / Configuración -->
+        <section class="card inputs-card">
+            <h2>⚙️ Parámetros del Trabajo</h2>
             
-        </select>
-        
-    </div>
+            <div class="input-group">
+                <label for="tipoRepas">Tipo de Reparación</label>
+                <select id="tipoRepas">
+                    <option value="a" selected>Módulos / Pantallas</option>
+                    <option value="b">Pin de Carga, Baterías, Cámaras</option>
+                </select>
+            </div>
 
+            <div class="input-group">
+                <label for="precioRepuesto">Precio del Repuesto (USD)</label>
+                <input type="number" id="precioRepuesto" placeholder="Ej: 45" autofocus>
+            </div>
 
+            <div class="input-group">
+                <label for="precioDolar">Cotización del Dólar ($)</label>
+                <input type="number" id="precioDolar" placeholder="Ej: 1100">
+            </div>
 
-    <div class="principal">
-        <label for="">Ingrese precio del Repuesto</label>
-        <input type="number" id="precioRepuesto" autofocus>
-        <label for="">Ingrese precio del dolar</label>
-        <input type="number" id="precioDolar"><br><br>
+            <button type="button" class="btn-calculate" onclick="nnn()">Calcular Presupuesto ⚡</button>
+        </section>
 
-        <button type="button" onclick="nnn()">Calcular</button>
-    </div>
+        <!-- Columna de Resultados / Salida -->
+        <section class="results-container">
+            <!-- Precio Principal -->
+            <div class="card price-summary-card">
+                <div class="price-header">
+                    <h3>Precio Sugerido</h3>
+                </div>
+                <div id="online" class="price-big">—</div>
+                <div id="debito" class="price-sub">—</div>
+            </div>
 
-    <div class="tipoRepa">
+            <div class="results-grid">
+                <!-- Tarjeta de Cuotas Bancarias -->
+                <div class="card card-cuotas">
+                    <h3>💳 Cuota Simple (Bancarias)</h3>
+                    <div class="cuotas-list">
+                        <div id="valor1" class="cuota-item">—</div>
+                        <div id="valor2" class="cuota-item">—</div>
+                        <div id="valor3" class="cuota-item">—</div>
+                        <div id="valor4" class="cuota-item">—</div>
+                    </div>
+                </div>
 
-            
-            
-        <div id="debito"></div>
+                <!-- Tarjeta de Tarjetas No Bancarias -->
+                <div class="card card-nobanc">
+                    <h3>💳 Especiales (Naranja / Fava)</h3>
+                    <div id="nobanc1" class="info-nobanc-header">—</div>
+                    <div class="cuotas-list">
+                        <div id="nobanc2" class="cuota-item">—</div>
+                        <div id="nobanc3" class="cuota-item">—</div>
+                    </div>
+                    <div id="nobanc4" class="info-nobanc-footer">—</div>
+                </div>
+            </div>
 
-        <div id="online"></div>
+            <!-- Panel de Negocio (Ganancia) -->
+            <div class="card profit-card">
+                <div id="ganancia" class="profit-value">Ganancia Estimada: —</div>
+            </div>
 
-        <div id="whatsapp"></div>
-
-        <div class="cuotas">
-            <div id="valor1"></div>
-            <div id="valor2"></div>
-            <div id="valor3"></div>
-            <div id="valor4"></div> 
-            
-        </div>
-
-        <div id="nobanc1"></div>
-        <div id="nobanc2"></div>
-        <div id="nobanc3"></div>
-        <div id="nobanc4"></div>
-        <div id="ganancia"></div>
-
-
-    </div>
-
-
-    
+            <!-- Previsualización y Envío de WhatsApp -->
+            <div class="card whatsapp-card" id="whatsapp-container" style="display: none;">
+                <div class="whatsapp-card-header">
+                    <span class="whatsapp-title">💬 Vista previa mensaje WhatsApp</span>
+                </div>
+                <div class="whatsapp-bubble">
+                    <div id="whatsapp" class="whatsapp-text">Introduce los valores y haz clic en calcular para generar el mensaje.</div>
+                </div>
+                <button type="button" id="btnCopiar" class="btn-whatsapp-copy" onclick="copiarAlPortapapeles()">Copiar para WhatsApp 📋</button>
+            </div>
+        </section>
+    </main>
 
     <script src="./cuentas.js"></script>
 

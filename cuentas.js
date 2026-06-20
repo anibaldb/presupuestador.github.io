@@ -80,8 +80,7 @@ function nnn(){
 
     
     document.getElementById('whatsapp').textContent =
-`
-📱 PRESUPUESTO LISTO
+`📱 PRESUPUESTO LISTO
 
 💰 Total reparación: $${precioOnline.toFixed()} - SOLO EFECTIVO O TRANSFERENCIA
 
@@ -94,9 +93,13 @@ function nnn(){
 📍  Revisión sin cargo
 🛠️ Reparación en el día si lo traes antes de las 13hs de lunes a viernes
 
-👉 Si querés la realizamos hoy mismo, avisame 👍
-`;
+👉 Si querés la realizamos hoy mismo, avisame 👍`;
     
+    // Mostrar el contenedor de whatsapp y botón de copiar si estaban ocultos
+    var container = document.getElementById('whatsapp-container');
+    if (container) {
+        container.style.display = 'block';
+    }
     
     document.getElementById('online').innerHTML = "PRECIO ONLINE  $"+precioOnline.toFixed()
 
@@ -120,8 +123,6 @@ function nnn(){
 
     document.getElementById('ganancia').innerHTML = "GANANCIA ESTIMADA: $" + ganancia.toFixed();
 
-
-
     }
 
     document.addEventListener("keyup", function(event) {
@@ -129,6 +130,30 @@ function nnn(){
             nnn();
         }
     });
+
+function copiarAlPortapapeles() {
+    var texto = document.getElementById('whatsapp').textContent;
+    if (!texto || texto.trim() === "") {
+        alert("Primero calcula un presupuesto para poder copiarlo.");
+        return;
+    }
+    navigator.clipboard.writeText(texto.trim()).then(function() {
+        var btn = document.getElementById('btnCopiar');
+        if (btn) {
+            var originalText = btn.innerHTML;
+            btn.innerHTML = '¡Mensaje Copiado! 💬 ✓';
+            btn.classList.add('copiado');
+            setTimeout(function() {
+                btn.innerHTML = originalText;
+                btn.classList.remove('copiado');
+            }, 2000);
+        }
+    }).catch(function(err) {
+        console.error('Error al copiar al portapapeles: ', err);
+        // Fallback básico si falla (ej. por permisos de navegador)
+        alert("No se pudo copiar automáticamente. Por favor selecciona el texto y cópialo manualmente.");
+    });
+}
 
 
 
