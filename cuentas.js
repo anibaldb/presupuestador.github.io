@@ -23,11 +23,11 @@ function nnn(){
 
     if (value == "a"){
 
-         quieroGanar = 18000
+         quieroGanar = 22000
         
     }else if (value == "b"){
 
-        quieroGanar = 18000
+        quieroGanar = 22000
 
     }
     
@@ -36,11 +36,11 @@ function nnn(){
 
     
 
-    if (repuestoPesos<18000){
+    if (repuestoPesos<22000){
 
         var presuCliente = (repuestoPesos + quieroGanar)
 
-    }else if(repuestoPesos>=18000 && repuestoPesos<=49000){
+    }else if(repuestoPesos>=22000 && repuestoPesos<=49000){
 
         presuCliente = (repuestoPesos *2)
 
@@ -55,10 +55,10 @@ function nnn(){
 
     var precioOnline = presuCliente
     var debito= presuCliente*1.1
-    var tresCuotas= presuCliente*1.162
-    var seisCuotas= presuCliente*1.2201
-    var nueveCuotas= presuCliente*1.5143
-    var doceCuotas= presuCliente*1.6578
+    var tresCuotas= presuCliente*1.21
+    var seisCuotas= presuCliente*1.32
+    var nueveCuotas= presuCliente*1.45
+    var doceCuotas= presuCliente*1.56
 
     var tresCuotasNoBanc= debito*1.2919
     var seisCuotasNoBanc= debito*1.4819
