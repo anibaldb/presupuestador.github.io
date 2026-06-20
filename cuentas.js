@@ -1,11 +1,43 @@
-
 function precioPsicologico(precio){
     return Math.round(precio / 1000) * 1000 - 100;
 }
 
-    
+// Obtener cotización del dólar blue desde DolarApi.com
+function obtenerDolarBlue() {
+    var inputDolar = document.getElementById('precioDolar');
+    var statusEl = document.getElementById('dolar-status');
 
+    if (statusEl) {
+        statusEl.textContent = '⏳ Consultando cotización...';
+        statusEl.className = 'dolar-status loading';
+    }
 
+    fetch('https://dolarapi.com/v1/dolares/blue')
+        .then(function(response) {
+            if (!response.ok) throw new Error('Error en la respuesta');
+            return response.json();
+        })
+        .then(function(data) {
+            inputDolar.value = data.venta;
+            if (statusEl) {
+                var fecha = new Date(data.fechaActualizacion);
+                var opciones = { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+                var fechaFormateada = fecha.toLocaleDateString('es-AR', opciones);
+                statusEl.textContent = '✅ Blue venta: $' + data.venta + ' | Compra: $' + data.compra + ' — Act: ' + fechaFormateada;
+                statusEl.className = 'dolar-status ok';
+            }
+        })
+        .catch(function(error) {
+            console.error('Error al obtener dólar blue:', error);
+            if (statusEl) {
+                statusEl.textContent = '⚠️ No se pudo obtener la cotización. Ingresá el valor manualmente.';
+                statusEl.className = 'dolar-status error';
+            }
+        });
+}
+
+// Cargar cotización automáticamente al abrir la página
+document.addEventListener('DOMContentLoaded', obtenerDolarBlue);
 
 function nnn(){
 
