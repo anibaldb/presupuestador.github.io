@@ -1,5 +1,7 @@
 
-
+function precioPsicologico(precio){
+    return Math.round(precio / 1000) * 1000 - 100;
+}
 
     
 
@@ -54,7 +56,7 @@ function nnn(){
 
 
     var precioOnline = presuCliente
-    var debito= presuCliente*1.1
+    var debito= presuCliente*1.09
     var tresCuotas= presuCliente*1.21
     var seisCuotas= presuCliente*1.32
     var nueveCuotas= presuCliente*1.45
@@ -63,9 +65,37 @@ function nnn(){
     var tresCuotasNoBanc= debito*1.2919
     var seisCuotasNoBanc= debito*1.4819
 
+    var ganancia = presuCliente - repuestoPesos;
 
+    precioOnline = precioPsicologico(precioOnline);
+    debito = precioPsicologico(debito);
+
+    tresCuotas = precioPsicologico(tresCuotas);
+    seisCuotas = precioPsicologico(seisCuotas);
+    nueveCuotas = precioPsicologico(nueveCuotas);
+    doceCuotas = precioPsicologico(doceCuotas);
+
+    tresCuotasNoBanc = precioPsicologico(tresCuotasNoBanc);
+    seisCuotasNoBanc = precioPsicologico(seisCuotasNoBanc);
 
     
+    document.getElementById('whatsapp').innerHTML =
+`
+📱 PRESUPUESTO LISTO
+
+💰 Total reparación: $${precioOnline.toFixed()} - SOLO EFECTIVO O TRANSFERENCIA
+
+💳 Débito / Credito(1 Pago): $${debito.toFixed()}
+
+💳 Tarjeta:
+• 3 cuotas aprox: $${(tresCuotas/3).toFixed()} (total $${tresCuotas.toFixed()})
+• 6 cuotas aprox: $${(seisCuotas/6).toFixed()} (total $${seisCuotas.toFixed()})
+
+📍  Revisión sin cargo
+🛠️ Reparación en el día si lo traes antes de las 13hs de lunes a viernes
+
+👉 Si querés la realizamos hoy mismo, avisame 👍
+`;
     
     
     document.getElementById('online').innerHTML = "PRECIO ONLINE  $"+precioOnline.toFixed()
@@ -88,6 +118,7 @@ function nnn(){
 
     document.getElementById('nobanc4').innerHTML = "Todas las cuotas salen poniendo el PRECIO MOSTRADOR en cualquiera de los dos posnet y el valor de la cuota es aproximado"
 
+    document.getElementById('ganancia').innerHTML = "GANANCIA ESTIMADA: $" + ganancia.toFixed();
 
 
 
