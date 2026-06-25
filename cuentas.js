@@ -126,7 +126,15 @@ function nnn(){
 
 🛠️ Reparación en el día si lo traes antes de las 13hs de lunes a viernes
 
-👉 Si querés la realizamos hoy mismo, avisame 👍`;
+👉 Si querés agendamos la reparacion para esta semana, avisame 👍
+
+Estamos en La Rioja 1626 entre Luro y San Martin . 
+De Lunes a Viernes de 10.30 a 15.30 y de 16.30 a 17.30 hs. 
+Te esperamos! Somos de Mar del Plata 🌊
+
+`
+
+
     
     // Mostrar el contenedor de whatsapp y botón de copiar si estaban ocultos
     var container = document.getElementById('whatsapp-container');
