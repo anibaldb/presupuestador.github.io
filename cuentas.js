@@ -89,10 +89,10 @@ function nnn(){
 
     var precioOnline = presuCliente
     var debito= presuCliente*1.09
-    var tresCuotas= presuCliente*1.21
-    var seisCuotas= presuCliente*1.32
-    var nueveCuotas= presuCliente*1.45
-    var doceCuotas= presuCliente*1.56
+    var tresCuotas= presuCliente*1.09*1.25
+    var seisCuotas= presuCliente*1.09*1.35
+    var nueveCuotas= presuCliente*1.09*1.55
+    var doceCuotas= presuCliente*1.09*1.75
 
     var tresCuotasNoBanc= debito*1.2919
     var seisCuotasNoBanc= debito*1.4819
